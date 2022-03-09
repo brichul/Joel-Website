@@ -1,0 +1,700 @@
+html
+{
+	scroll-behavior: smooth;
+}
+
+@font-face 
+{
+	font-family: 'Roboto';
+	src: url("Roboto/roboto-regular-webfont.woff") format("woff");
+	src: url("Roboto/roboto-regular-webfont.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;	
+}
+
+*
+{
+	font-family: Roboto;
+	font-size: 1vw;
+}
+
+::selection
+{
+	background: #0f2d52;
+	color: #ffffff;
+}
+
+body 
+{
+	background-image: url("Pictures/JoelPictureComp2.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+	min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+fade 
+{
+	position: absolute;
+	float: left;
+    width: 85%;
+    height: 35%;
+	top: 65%;
+    background-image: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 0), 
+        rgba(255, 255, 255, 1)
+    95%);
+}
+
+.sidebar
+{
+	display: none;
+}
+
+.blur
+{
+	background-color: ffffff10;
+    margin: auto;
+    width: 100%;
+	height: 100%;
+	overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 0;
+	position: fixed;
+	backdrop-filter: blur(12px) brightness(0.9);
+}
+
+.headerb
+{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: 3%;
+	padding: 3% 6%;
+	border-color: #000000;
+	border-width: 0.25em;
+	border-style: solid;
+	border-radius: 1em;
+	color: #000000;
+	background-color: rgba(0, 0, 0, 0);
+	transition: 0.25s;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	height: 75%;
+}
+
+.headerb span
+{
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.15s;
+	font-size: 2.5vh;
+}
+
+.headerb:hover
+{
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.header
+{
+    background-color: #ffffff;
+    margin: auto;
+    width: 100%;
+	height: 15%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+	position: absolute;
+	overflow: hidden;
+}
+
+.headerbs
+{
+	margin: 0;
+	margin-bottom: 1vh;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	float: left;
+	padding: auto;
+	height: 90%;
+	width: 65%;
+}
+
+.headerls
+{
+	margin: 0;
+	margin-bottom: 1vh;
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	float: right;
+	padding: auto;
+	height: 90%;
+	width: 35%;
+}
+
+.headerMbl
+{
+	display: none;
+}
+
+.headerm
+{
+	background-color: rgba(0, 0, 0, 0);
+	border-color: rgba(0, 0, 0, 0);
+	float: right;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	size: 4em;
+	height: 7.5vh;
+	width: 7.5vh;
+	margin-right: 3%;
+	cursor: pointer;
+}
+
+.headerl
+{
+	margin: 0;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0);
+	border-color: rgba(0, 0, 0, 0);
+	size: 100%;
+	height: 12.5vh;
+	width: 12.5vh;
+	cursor: pointer;
+	float: left;
+	margin-right: 1%;
+}
+
+.chunk
+{
+	background-color: rgb(0, 0, 0, 0);
+	width: 100%;
+	height: 25%;
+	overflow: hidden;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 1em;
+}
+
+.chunkHeader
+{
+	margin-top: 5%;
+	margin-left: 7.5%;
+	margin-right: 7.5%;
+	font-size: 1.65vw;
+	color: #ffffff;
+}
+
+.chunkText
+{
+	margin-bottom: 1%;
+	margin-left: 7.5%;
+	margin-right: 7.5%;
+	font-size: 1.65vw;
+	color: #ffffff;
+}
+
+.chunkTextEnd
+{
+	margin-bottom: 5%;
+	margin-left: 7.5%;
+	margin-right: 7.5%;
+	font-size: 1.65vw;
+	color: #ffffff;
+}
+
+.chunk2
+{
+	background-color: #ffffff; /*rgb(0, 0, 0, 0);*/
+	width: 100%;
+	height: 25%;
+	overflow: hidden;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50vh;
+	margin-top: 25vh;
+}
+
+.news
+{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.newsTitle
+{
+	font-size: 3vw;
+	text-align: center;
+}
+
+.newsContainer
+{
+	margin-left: 7.5%;
+	margin-top: 2.5%;
+	height: 100%;
+}
+
+.newsContainerL
+{
+	position: relative;
+	margin: 10%;
+	margin-top: 12.5%;
+	margin-bottom: 5%;
+	height: 70%;
+	width: 80%;
+}
+
+.article
+{
+	height: 50%;
+	width: 85%;
+	margin-bottom: 2.5vh;
+	overflow: hidden;
+}
+
+.articleL
+{
+	position: relative;
+	height: 50%;
+	width: 100%;
+	margin-bottom: 9%;
+}
+
+.articleLEnd
+{
+	position: relative;
+	height: 50%;
+	width: 100%;
+	margin-bottom: 4%;
+}
+
+.newsHeadline
+{
+	font-size: 200%;
+	font-weight: bold;
+	text-decoration: inherit;
+	color: #000000;
+}
+
+.newsHeadline:hover
+{
+	color: #0f2d52;
+}
+
+.newsHeadlineL
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-size: 250%;
+	font-weight: bold;
+	text-decoration: inherit;
+	color: #000000;
+}
+
+.newsHeadlineL:hover
+{
+	color: #0f2d52;
+}
+
+.newsContent
+{
+	font-size: 150%;
+}
+
+.newsContentL
+{
+	font-size: 150%;
+	width: 100%;
+}
+
+.readMore
+{
+	position: relative;
+	font-size: 150%;
+	color: #0f2d52;
+	text-decoration: inherit;
+}
+
+.readMore:hover
+{
+	color: #000022;
+}
+
+.readMoreL
+{
+	position: relative;
+	font-size: 150%;
+	color: #0f2d52;
+	text-decoration: inherit;
+}
+
+.readMoreL:hover
+{
+	color: #000022;
+}
+
+.moreNews
+{
+	position: absolute;
+	top: 90%;
+	width: 95.5%;
+	text-align: center;
+	font-size: 3vh;
+	text-decoration: inherit;
+	color: #0f2d52;
+}
+
+.moreNews:hover
+{
+	color: #000022;
+}
+
+.twitterHalf
+{
+	float: right;
+	margin: 2vw;
+	width: 50%;
+	height: 100%;
+	float: right;
+}
+
+.twitterContainer
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.twitter
+{
+	box-shadow: 2vw 2vw 4vw #aaaaaa;	
+}
+
+.footer
+{
+	background-color: #ffffff;
+    width: 100%;
+	height: 15%;
+	overflow: hidden;
+    left: 0;
+	bottom: 0;
+	margin: 0;
+	margin-top: auto;
+	padding: 0;
+	position: relative;
+	display: block;
+	border: 0;
+}
+
+.footerLinks
+{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	float: left;
+	padding: auto;
+	height: 100%;
+	width: 75%;
+}
+
+.footerLink
+{
+	font-size: 2vh;
+	padding: 1.5% 3%;
+	color: #000000;
+	background-color: rgba(0, 0, 0, 0);
+	transition: 0.25s;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	top: 50%;
+	transform: translateY(-50%);
+	justify-content: center;
+	align-items: center;
+	text-decoration: inherit;
+}
+
+.footerl
+{
+	margin: 0;
+	position: relative;
+	/*top: 50%;
+	transform: translateY(-50%);*/
+	background-color: rgba(0, 0, 0, 0);
+	border-color: rgba(0, 0, 0, 0);
+	size: 100%;
+	height: 12.5vh;
+	width: 12.5vh;
+	float: right;
+	margin-right: 1%;
+}
+	
+#copyright
+{
+	background-color: rgba(0, 0, 0, 0);
+	border-color: rgba(0, 0, 0, 0);
+	color: #aaaaaa;
+	font-size: 1.5vh;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+	
+@media (max-width: 110vh)
+{
+	*
+	{
+		font-family: Roboto;
+		font-size: 2.5vh;
+	}
+	
+	body
+	{
+		background-image: url("Pictures/JoelPicturePhone.png");
+		background-position: top center;
+	}
+	
+	.header
+	{
+		display: none;
+	}
+	
+	.headerMbl
+	{
+		background-color: ffffff10;
+		margin: auto;
+		width: 100%;
+		height: 6em;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		position: fixed;
+		display: block;
+	}
+	
+	.sidebar
+	{
+		display: block;
+		height: 100%;
+		width: 0%;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #ffffff;
+		overflow-x: hidden;
+		padding-top: 20px;
+		/*backdrop-filter: blur(12px) brightness(0.9);
+		-webkit-backdrop-filter: blur(12px) brightness(0.9);*/
+		transition: 0.5s;
+	}
+	
+	#sidebartoggle
+	{
+		background-color: rgba(0, 0, 0, 0);
+		border-color: rgba(0, 0, 0, 0);
+		color: rgba(0, 0, 0, 0);
+		margin-left: 0.25em;
+		margin-top: 0.5em;
+		border-radius: 1em;
+		transition: 0.5s;
+	}
+	
+	.sidebarb
+	{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 3%;
+		margin-bottom: 3%;
+		padding: 6% 12%;
+		border-color: #000000;
+		border-width: 0.25em;
+		border-style: solid;
+		border-radius: 0.5em;
+		color: #000000;
+		background-color: rgba(0, 0, 0, 0);
+		transition: 0.25s;
+		cursor: pointer;
+		position: relative;
+		display: block;
+		width: 90%;
+	}
+	
+	.sidebarb span
+	{
+		cursor: pointer;
+		display: inline-block;
+		transition: 0.15s;
+	}
+
+	.sidebarb:hover
+	{
+		background-color: #000000;
+		color: #ffffff;
+	}
+	
+	.x
+	{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 3%;
+		margin-bottom: 3%;
+		background-color: rgba(0, 0, 0, 0);
+		border-color: rgba(0, 0, 0, 0);
+		cursor: pointer;
+		position: relative;
+		display: block;
+	}
+	
+	.sidebarls
+	{
+		position: relative;
+		height: 10%;
+		margin-left: 2.75%;
+		/*top: 50%;
+		transform: translateY(-50%);*/
+	}
+	
+	.headerm
+	{
+		size: 3.25em;
+		height: 6.5vh;
+		width: 6.5vh;
+		float: left;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	.chunk2
+	{
+		background-color: #ffffff;
+	}
+	
+	.chunkText
+	{
+		font-size: 2.5vh;
+	}
+	
+	.chunkTextEnd
+	{
+		font-size: 2.5vh;
+	}
+	
+	.chunkHeader
+	{
+		font-size: 2.5vh;
+	}
+	
+	.newsContainerL
+	{
+		margin-top: 15%;
+	}
+	
+	.newsHeadline
+	{
+		font-size: 2vh;
+		font-weight: bold;
+		text-decoration: inherit;
+		color: #000000;
+	}
+
+	.newsHeadline:hover
+	{
+		color: #0f2d52;
+	}
+	
+	.newsHeadlineL
+	{
+		font-size: 4vh;
+	}
+
+	.newsContent
+	{
+		font-size: 1.5vh;
+	}
+	
+	.newsContentL
+	{
+		font-size: 2vh;
+	}
+
+	.readMore
+	{
+		position: relative;
+		font-size: 1.5vh;
+		color: #0f2d52;
+		text-decoration: inherit;
+	}
+	
+	.readMoreL
+	{
+		position: relative;
+		font-size: 2vh;
+		color: #0f2d52;
+		text-decoration: inherit;
+	}
+
+	.readMore:hover
+	{
+		color: #000022;
+	}
+	
+	.moreNews
+	{
+		font-size: 100%;
+	}
+	
+	.footerLinks
+	{
+		padding-left: 5vw;
+	}
+	
+	.footerLink
+	{
+		font-size: 2vh;
+	}
+}
+
+@media (max-width: 50vh)
+{
+	.news
+	{
+		display: none;
+	}
+	
+	.twitterHalf
+	{
+		width: 95%;
+	}
+}
