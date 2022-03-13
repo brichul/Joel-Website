@@ -29,7 +29,7 @@ body
 	background-image: url("Pictures/JoelPictureComp2.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: cover;
+	background-size: auto 150vh;
 	background-position: center center;
 	min-height: 100vh;
     display: flex;
