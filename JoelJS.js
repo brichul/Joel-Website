@@ -1,8 +1,50 @@
+function isInViewport(element) 
+{
+    const rect = element.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom >= 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 var currBG = 1;
 
 if (window.location.pathname.split("/").pop() != "JoelWebsiteNews.html")
 {
 	document.getElementById("chunk1").style.marginTop = window.innerHeight.toString() + "px";
+}
+
+var facts = document.getElementsByClassName('fact');
+for (var i = 0; i < facts.length; ++i) {
+    var fact = facts[i];
+	if (parseInt(fact.getAttribute('id')) % 4 == 1)
+	{
+		fact.style.backgroundColor = '#000';
+		fact.style.cssFloat = 'right';
+		fact.style.left = "50%"
+	}
+	else if (parseInt(fact.getAttribute('id')) % 4 == 2)
+	{
+		fact.style.backgroundColor = '#fff';
+		fact.style.cssFloat = 'left';
+		fact.style.right = "50%"
+	}
+	else if (parseInt(fact.getAttribute('id')) % 4 == 3)
+	{
+		fact.style.backgroundColor = '#000';
+		fact.style.cssFloat = 'left';
+		fact.style.right = "50%"
+	}
+	else if (parseInt(fact.getAttribute('id')) % 4 == 0)
+	{
+		fact.style.backgroundColor = '#fff';
+		fact.style.cssFloat = 'right';
+		fact.style.left = "50%"
+	}
 }
 
 function sidebar()
@@ -60,7 +102,38 @@ function cfade()
 	}
 }
 
+function FactSlide()
+{
+	orig = "50%";
+	if (1.1 * window.innerHeight >= window.innerWidth)
+	{
+		orig = "100%"
+	}
+	var facts = document.getElementsByClassName('fact');
+	for (var i = 0; i < facts.length; ++i) 
+	{
+		var fact = facts[i];
+		if (isInViewport(fact) && fact.style.cssFloat == "right")
+		{
+			fact.style.left = '0';
+		}
+		else if (isInViewport(fact) && fact.style.cssFloat == "left")
+		{
+			fact.style.right = '0';
+		}
+		else if (!isInViewport(fact) && fact.style.cssFloat == "right")
+		{
+			fact.style.left = orig;
+		}
+		else if (!isInViewport(fact) && fact.style.cssFloat == "left")
+		{
+			fact.style.right = orig;
+		}
+	}
+}
+
 document.getElementById("sidebartoggle").onclick = sidebar;
 document.getElementById("copyright").onclick = cfade;
 //setInterval(PictureFade, 7500);
-setInterval(BlurFade, 100);
+document.addEventListener('scroll', BlurFade);
+document.addEventListener('scroll', FactSlide);
