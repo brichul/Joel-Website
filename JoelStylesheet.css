@@ -67,7 +67,7 @@ fade
     left: 0;
     z-index: 0;
 	position: fixed;
-	backdrop-filter: blur(12px) brightness(0.9);
+	backdrop-filter: blur(0px) brightness(1);
 }
 
 .headerb
@@ -194,25 +194,18 @@ fade
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 1em;
 }
 
 .chunkHeader
 {
-	margin-top: 5%;
-	margin-left: 7.5%;
-	margin-right: 7.5%;
-	font-size: 1.65vw;
-	color: #ffffff;
+	font-size: 1.35vw;
+	color: #000;
 }
 
 .chunkText
 {
-	margin-bottom: 1%;
-	margin-left: 7.5%;
-	margin-right: 7.5%;
-	font-size: 1.65vw;
-	color: #ffffff;
+	font-size: 1.35vw;
+	color: #000;
 }
 
 .chunkTextEnd
@@ -224,11 +217,60 @@ fade
 	color: #ffffff;
 }
 
+.factText
+{
+	position: relative; 
+	top: 50%; 
+	transform: translateY(-50%); 
+	margin-left: 7.5%; 
+	margin-right: 7.5%;
+}
+
+.fact
+{
+	position: relative;
+	float: right;
+	width: 50%;
+	height: 30vh;
+	background-color: #fff;
+	transition: 2s;
+}
+
+.dykW
+{
+	margin: 0;
+	margin-bottom: 2.5%;
+	font-size: 1.35vw;
+	color: #fff;
+}
+
+.dykB
+{
+	margin: 0;
+	margin-bottom: 2.5%;
+	font-size: 1.35vw;
+	color: #000;
+}
+
+.factW
+{
+	margin: 0;
+	font-size: 1.35vw;
+	color: #fff;
+}
+
+.factB
+{
+	margin: 0;
+	font-size: 1.35vw;
+	color: #000;
+}
+
 .chunk2
 {
 	background-color: #ffffff; /*rgb(0, 0, 0, 0);*/
 	width: 100%;
-	height: 100%;
+	height: 25%;
 	overflow: hidden;
 	position: relative;
 	margin-left: auto;
@@ -614,6 +656,42 @@ fade
 	.chunkHeader
 	{
 		font-size: 2.5vh;
+	}
+	
+	.fact
+	{
+		width: 100%;
+		height: 35vh;
+	}
+
+	.dykW
+	{
+		margin: 0;
+		margin-bottom: 2.5%;
+		font-size: 2.5vh;
+		color: #fff;
+	}
+
+	.dykB
+	{
+		margin: 0;
+		margin-bottom: 2.5%;
+		font-size: 2.5vh;
+		color: #000;
+	}
+
+	.factW
+	{
+		margin: 0;
+		font-size: 2.5vh;
+		color: #fff;
+	}
+
+	.factB
+	{
+		margin: 0;
+		font-size: 2.5vh;
+		color: #000;
 	}
 	
 	.newsContainerL
