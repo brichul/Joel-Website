@@ -132,8 +132,25 @@ function FactSlide()
 	}
 }
 
+function openPopup()
+{
+	document.getElementById("registerPopup").style.left = "25%";
+	document.getElementById("registerBlur").style.left = "0";
+}
+
+function closePopup()
+{
+	document.getElementById("registerPopup").style.transition = "1.5s";
+	document.getElementById("registerBlur").style.transition = "1.5s";
+	document.getElementById("registerPopup").style.left = "100%";
+	document.getElementById("registerBlur").style.left = "100%";
+}
+
+setTimeout(openPopup, 4000)
+
 document.getElementById("sidebartoggle").onclick = sidebar;
 document.getElementById("copyright").onclick = cfade;
+document.getElementById("registerClose").onclick = closePopup;
 //setInterval(PictureFade, 7500);
 document.addEventListener('scroll', BlurFade);
 document.addEventListener('scroll', FactSlide);
